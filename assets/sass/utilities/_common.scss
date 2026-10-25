@@ -1,0 +1,430 @@
+.shape-mockup-wrap {
+   z-index: 2;
+   position: relative;
+}
+
+.shape-mockup {
+   position: absolute;
+   z-index: -1;
+   pointer-events: none;
+
+   &.z-index-3 {
+      z-index: 3;
+      pointer-events: none;
+   }
+
+   &.z-index-1 {
+      z-index: 1;
+      pointer-events: none;
+   }
+
+   .svg-img {
+      height: 110px;
+      width: 110px;
+   }
+}
+
+.z-index-step1 {
+   position: relative;
+   z-index: 4 !important;
+}
+
+.z-index-common {
+   position: relative;
+   z-index: 3;
+}
+
+.z-index-3 {
+   z-index: 3;
+}
+
+.z-index-2 {
+   z-index: 2;
+}
+
+.z-index-n1 {
+   z-index: -1;
+}
+
+.media-body {
+   flex: 1;
+}
+
+.badge {
+   position: absolute;
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
+   width: fit-content;
+   display: inline-block;
+   text-align: center;
+   background-color: $theme-color;
+   color: $white-color;
+   padding: 0.25em 0.45em;
+   font-size: 0.7em;
+   border-radius: 50%;
+   top: 8px;
+   right: 8px;
+   font-weight: 400;
+   transition: 0.3s ease-in-out;
+}
+
+.th-social {
+   a {
+      display: inline-block;
+      @include equal-size(var(--icon-size, 44px));
+      line-height: var(--icon-size, 44px);
+      background-color: transparent;
+      border: 1px solid $white-color;
+      color: $white-color;
+      font-size: 18px;
+      text-align: center;
+      margin-right: 16px;
+      border-radius: 50%;
+
+      @include vxs {
+         margin-right: 7px;
+      }
+
+      &:last-child {
+         margin-right: 0;
+
+         @include vxs {
+            margin-right: 0;
+         }
+      }
+
+      &:hover {
+         background-color: $theme-color;
+         color: $white-color;
+         border: 1px solid transparent;
+      }
+   }
+
+   &.color-theme {
+      a {
+         color: $body-color;
+         border-color: $theme-color;
+      }
+   }
+
+   &.style2 {
+
+      a {
+         --icon-size: 40px;
+         background: transparent;
+         color: $black-color3;
+         font-size: 16px;
+         border: 0;
+         background: transparent;
+         margin: 0;
+
+         &:hover {
+            color: $theme-color;
+            background: transparent;
+         }
+      }
+   }
+
+   &.style3 {
+      a {
+         --icon-size: 40px;
+         @include equal-size(var(--icon-size, 48px));
+         line-height: var(--icon-size, 48px);
+         border: 1px solid #D8DBDC;
+
+         &:hover {
+            border: 1px solid $theme-color;
+         }
+      }
+   }
+
+   &.style4 {
+      a {
+         --icon-size: 44px;
+         line-height: 46px;
+         border-radius: 50%;
+         background: $black-color2;
+         color: $theme-color;
+         border: 0;
+
+         &:hover {
+            background: $theme-color;
+            color: $white-color;
+         }
+      }
+   }
+
+   &.style5 {
+      a {
+         background: $black-color2;
+         color: $theme-color;
+
+         &:hover {
+            background: $theme-color;
+            color: $title-color;
+         }
+      }
+   }
+
+   &.style6 {
+      a {
+         background: $smoke-color;
+         border: 0;
+         font-size: 16px;
+         --icon-size: 40px;
+         line-height: 42px;
+
+         &:hover {
+            background: $theme-color2;
+            color: $white-color;
+         }
+      }
+   }
+
+   &.style7 {
+      a {
+         color: $white-color;
+
+         &:hover {
+            color: $white-color;
+            background: $theme-color2;
+         }
+      }
+   }
+
+   &.style8 {
+      a {
+         background: $white-color;
+         color: $theme-color;
+
+         &:hover {
+            background: $title-color;
+         }
+      }
+   }
+
+   &.style9 {
+      a {
+         background: transparent;
+         color: $theme-color;
+         border: 1px solid $border-color;
+         --icon-size: 32px;
+         line-height: 32px;
+         margin-right: 5px;
+         font-size: 14px;
+
+         &:hover {
+            background: $title-color;
+         }
+      }
+   }
+
+   &.style10 {
+      a {
+         background: transparent;
+         color: $white-color;
+         border: 1px solid $black-color3;
+         --icon-size: 46px;
+         line-height: 46px;
+         margin-right: 7px;
+         font-size: 14px;
+
+         &:hover {
+            background: $theme-color;
+            border-color: $theme-color;
+         }
+      }
+   }
+
+   &.style11 {
+      a {
+         background: transparent;
+         color: $black-color3;
+         --icon-size: 0;
+         line-height: 46px;
+         margin-right: 20px;
+         font-size: 14px;
+
+         &:hover {
+            color: $theme-color;
+         }
+      }
+
+      &:first-child {
+         a {}
+      }
+   }
+
+   &.style12 {}
+}
+
+.bg-mask {
+   mask-size: 100% 100%;
+   mask-repeat: no-repeat;
+}
+
+.box-icon {
+   img {
+      transition: 0.4s ease-in-out;
+   }
+}
+
+.box-text {
+   margin-bottom: -0.5em;
+}
+
+.btn-group {
+   display: inline-flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 30px;
+
+   &.style2 {
+      gap: 20px 70px;
+
+      @include sm {
+         gap: 20px 30px;
+      }
+   }
+
+   @include sm {
+      gap: 20px;
+   }
+}
+
+.th-bg-img {
+   position: absolute;
+   inset: 0;
+
+   img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
+}
+
+.color-masking {
+   position: relative;
+   display: inline-block;
+
+   .masking-src {
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: color;
+      background: $theme-color;
+   }
+}
+
+.color-masking2 {
+   position: relative;
+   display: inline-block;
+
+   .masking-src {
+      position: absolute;
+      inset: 0;
+      mix-blend-mode: color;
+      background: $theme-color2;
+   }
+}
+
+.mfp-zoom-in .mfp-content {
+   opacity: 0;
+   transition: all 0.4s ease;
+   transform: scale(0.5);
+}
+
+.mfp-zoom-in.mfp-bg {
+   opacity: 0;
+   transition: all 0.4s ease;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-content {
+   opacity: 1;
+   transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+   opacity: 0.7;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-content {
+   transform: scale(0.7);
+   opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+   opacity: 0;
+}
+
+.th-radius {
+   border-radius: 50px;
+}
+
+.grid_lines {
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   overflow: hidden;
+
+   .grid_line {
+      position: relative;
+      width: 1px;
+      height: 100%;
+      display: inline-block;
+      background-color: rgba($color: #ffffff, $alpha: 0.1);
+      mix-blend-mode: difference;
+
+      &:after,
+      &:before {
+         content: '';
+         position: absolute;
+         top: -60px;
+         left: 0;
+         width: 1px;
+         height: 60px;
+         background: $white-color;
+         background: linear-gradient(0deg, $white-color 0%, rgba(255, 255, 255, 0) 100%);
+         animation: gridanim 25s linear infinite;
+         opacity: 0.3;
+      }
+
+      &:after {
+         animation-delay: 10s;
+      }
+   }
+}
+
+@keyframes gridanim {
+   0% {
+      top: -60px;
+   }
+
+   50% {
+      top: 100%;
+   }
+
+   100% {
+      top: -60px;
+      background: linear-gradient(180deg, $white-color 0%, rgba(255, 255, 255, 0) 100%);
+   }
+}
+
+@keyframes gridanim2 {
+   0% {
+      top: -60px;
+   }
+
+   50% {
+      top: 100%;
+   }
+
+   100% {
+      top: -60px;
+      background: linear-gradient(180deg, $theme-color 0%, rgba(255, 255, 255, 0) 100%);
+   }
+}

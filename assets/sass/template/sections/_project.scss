@@ -1,0 +1,690 @@
+/* Project Card -------------------------------*/
+.project-slider1 {
+    .slider-pagination-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 1404px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .slider-pagination2 {
+            flex: none;
+
+            .current-slide {
+                font-size: 30px;
+                font-weight: 700;
+                font-family: $title-font;
+                color: $title-color;
+            }
+
+            .divider,
+            .total-slides {
+                font-weight: 500;
+                font-family: $title-font;
+            }
+        }
+
+        .slider-pagination {
+            margin-top: 0;
+        }
+
+        .icon-box {
+            flex: none;
+        }
+    }
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    @include sm {
+        max-width: 400px;
+    }
+
+    .box-img {
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+
+            @include xs {
+                min-height: 300px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(1, 9, 22, 0.80), rgba(1, 9, 22, 0.80));
+            transition: 0.4s;
+            opacity: 0;
+            z-index: 1;
+        }
+    }
+
+    .box-content {
+        padding: 34px;
+        background-color: transparent;
+        border-radius: 0px;
+        position: absolute;
+        z-index: 3;
+        transition: 0.4s ease-in-out;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        @include xl {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include lg {
+            padding: 20px;
+        }
+
+        &.style2 {
+            @include xl {
+                align-items: flex-end;
+                flex-direction: column-reverse;
+
+            }
+        }
+    }
+
+    .box-title {
+        font-weight: 700;
+        font-size: 28px;
+        margin-top: -0.3em;
+        margin-bottom: -0.3em;
+        max-width: 441px;
+        text-transform: capitalize;
+
+        @include xl {
+            margin-bottom: 10px;
+        }
+
+        @include lg {
+            font-size: 24px;
+        }
+
+        a {
+            color: $white-color;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .box-subtitle {
+        color: $theme-color2;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: $title-font;
+        margin-bottom: 10px;
+    }
+
+    &:hover {
+        .box-img {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        .box-content {
+            opacity: 1;
+            visibility: visible;
+            bottom: 0;
+        }
+    }
+}
+
+
+/* Project 2 -------------------------------*/
+.project-card {
+
+    &.style2 {
+        position: relative;
+        border-radius: 32px;
+        transition: all .3s;
+
+        @include sm {
+            max-width: 100%;
+        }
+
+        .box-img {
+            position: relative;
+            height: 541px !important;
+            transition: all .3s;
+        }
+
+        .popup-image {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgb(255, 255, 255, 0.2);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 111;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+
+            @media (max-width: 575px) {
+                top: 30%;
+            }
+
+            img {
+                width: 32px;
+                min-height: 20px;
+            }
+        }
+
+        @media (max-width: 1599px) {
+            .box-img .mein-img {
+                min-height: auto;
+                height: 100%;
+            }
+        }
+
+        .box-content {
+            border-radius: 16px;
+            background: $white-color;
+            padding: 20px;
+            bottom: 0;
+            margin: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+
+            @media (max-width:1599px) {
+                display: block;
+            }
+        }
+
+        .box-subtitle {
+            border-radius: 48px;
+            background: $black-color7;
+            padding: 0px 16px;
+        }
+
+        .box-title {
+            font-size: 24px;
+
+            a {
+                color: $title-color;
+            }
+        }
+
+        .icon-btn.style2 {
+            background: $theme-color2;
+            border-color: $theme-color2;
+
+            @media (max-width:1599px) {
+                margin-top: 15px;
+            }
+        }
+
+
+    }
+
+}
+
+.project-slider-content-wrap {
+    position: relative;
+    margin-left: -313px;
+
+    @media (max-width:1599px) {
+        margin-left: 0px;
+    }
+
+    // @include ml {
+    //     margin-left: 0px;
+    // }
+}
+
+.project-slider2 {
+    // position: relative; 
+    // margin-left: -300px;
+
+    // @include lg {
+    //     margin-left: 0px;
+    // }
+
+    .swiper-wrapper {
+        height: auto !important;
+    }
+
+    .swiper-slide {
+        @media (min-width:1600px) {
+            width: 312px !important;
+            height: 541px !important;
+            border-radius: 32px;
+            transition: all 1s ease-in-out 0s;
+            position: relative;
+        }
+
+
+
+        //    @media (max-width:1599px) {
+        //         width: unset !important;
+        //         height: unset !important;
+        //         border-radius: 32px;
+        //     }
+
+
+    }
+
+    .swiper-slide.swiper-slide-active {
+        // width: 648px !important;
+        // height: 541px !important;
+        // border-radius: 32px;
+        // transition: all .3s;
+        // position: relative;
+
+        @media (min-width:1600px) {
+            width: 648px !important;
+            height: 541px !important;
+            border-radius: 32px;
+            transition: all 1s ease-in-out 0s;
+            position: relative;
+        }
+
+        // @media (max-width:1599px) {
+        //     width: unset !important;
+        //     height: unset !important;
+        //     border-radius: 32px;
+        // }
+
+
+
+        .project-card {
+
+            &.style2 {
+                @include sm {
+                    max-width: 100%;
+                }
+
+                .popup-image {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .box-img {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                .box-content {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+        }
+    }
+}
+
+/* Project 3 -------------------------------*/
+.project-slider3 {
+    position: absolute;
+    right: 260px;
+    bottom: -1px;
+    left: auto;
+    max-width: 620px;
+
+    @media (max-width:1799px) {
+        max-width: 720px;
+        right: 150px;
+    }
+
+    @include md {
+        position: unset;
+        margin: 0 auto;
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: $white-color;
+        border-radius: 30px 30px 0 0;
+    }
+
+}
+
+
+.project-wrap3 {
+    max-width: 1840px;
+    margin: 40px auto;
+    position: relative;
+    min-height: 661px;
+    z-index: 1;
+
+    @include md {
+        max-width: 100%;
+        min-height: 100%;
+    }
+
+    .slider-arrow.style-border4 {
+        left: 117px;
+    }
+
+    .slider-arrow.style-border4.slider-next {
+        right: 117px;
+        left: auto;
+    }
+
+}
+
+.project-bg-shape3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include md {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.project-card3 {
+    padding: 50px;
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 620px;
+    min-height: 330px;
+    background: $white-color;
+
+    @include md {
+        border-radius: 30px;
+    }
+
+    @include sm {
+        padding: 50px 20px;
+    }
+
+    .box-tag {
+        color: $white-color;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        border-radius: 30px;
+        background: $theme-color;
+
+        @include sm {
+            padding: 8px 15px;
+        }
+    }
+
+    .box-subtitle {
+        color: $black-color3;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        max-width: 511px;
+    }
+
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: -0.25em;
+        color: $title-color;
+        font-size: 36px;
+        font-weight: 900;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include sm {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .th-btn {
+        margin-top: 30px;
+        background: $theme-color3;
+        text-transform: uppercase;
+
+        &:hover {
+            background: $theme-color2;
+            color: $title-color;
+        }
+    }
+}
+
+
+
+/* Project Details Page -------------------------------*/
+.project-meta {
+    display: inline-flex;
+    border: 1px solid $border-color;
+    border-radius: 20px;
+    padding: 0 9px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: $title-font;
+    letter-spacing: 0.02em;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 18px;
+
+    &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        background: $title-color;
+        border-radius: 50%;
+    }
+
+    &.text-white {
+        border: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+
+        &:before {
+            background: $white-color;
+        }
+    }
+}
+
+.project-page-card {
+    text-align: center;
+
+    .box-icon {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: $gray-color4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border: 5px solid $white-color;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border: 1px solid $theme-color;
+            border-radius: 50%;
+        }
+
+        img {
+            transition: 0.4s;
+        }
+    }
+
+    .box-title {
+        font-weight: 700;
+    }
+
+    &:hover {
+        .box-icon {
+            img {
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+
+    @include ml {
+        text-align: start;
+
+        .box-icon {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+/* Project 4 -------------------------------*/
+.project-card {
+
+    &.style4 {
+        position: relative;
+        border-radius: 32px;
+        transition: all .3s;
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            border-radius: 24px;
+        }
+
+        .popup-image {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgb(255, 255, 255, 0.2);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 11;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .3s;
+
+            @include xl {
+                top: 30%;
+            }
+
+            @include md {
+                top: 50%;
+            }
+
+            @include sm {
+                top: 40%;
+            }
+
+            @include xs {
+                top: 20%;
+            }
+
+            img {
+                width: 32px;
+                min-height: 20px;
+            }
+        }
+
+
+
+        .box-content {
+            border-radius: 16px;
+            background: $white-color;
+            padding: 20px;
+            bottom: 0;
+            margin: 24px;
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s;
+
+            @include vxs {
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+
+        .box-subtitle {
+            border-radius: 48px;
+            background: $gray-color;
+            color: $title-color;
+            padding: 0px 16px;
+        }
+
+        .box-title {
+            font-size: 24px;
+
+            @include vxs {
+                font-size: 20px;
+            }
+
+            a {
+                color: $title-color;
+            }
+        }
+
+        .icon-btn.style2 {
+            background: $theme-color;
+            border-color: $theme-color;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        &:hover {
+            .popup-image {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+}

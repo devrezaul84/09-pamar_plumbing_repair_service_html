@@ -1,0 +1,66 @@
+/* Appointment ---------------------------------- */
+.appointment-wrap {
+    max-width: 1840px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(21, 35, 58, 0.00) 0%, #215CBE 100%), #15233A;
+
+    .shape-mockup {
+        width: 251px;
+        height: 251px;
+        line-height: 251px;
+        background: $white-color;
+        border-radius: 1000px;
+        text-align: center;
+        margin-right: -30px;
+        margin-top: -34px;
+
+        img {
+            width: 205px;
+            height: 205px;
+            margin-bottom: -20px;
+            margin-left: -20px;
+        }
+    }
+}
+
+.appointment-thumb {
+    padding: 10px;
+    margin-right: -113px;
+
+    @include ml {
+        margin-right: 0;
+        padding:40px 20px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+}
+
+.appointment-from {
+    padding: 90px 50px;
+    padding-left: 100px;
+
+    @include ml {
+        padding: 40px 20px;
+    }
+    .th-btn.style14{
+        background: $theme-color3;
+    }
+}
+
+.appointment-page-form {
+    border-radius: 30px;
+    padding: 60px;
+
+    @include sm {
+        padding: 40px;
+    }
+
+    @include xs {
+        padding: 30px 20px;
+    }
+}

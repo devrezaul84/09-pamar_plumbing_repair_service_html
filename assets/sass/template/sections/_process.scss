@@ -1,0 +1,722 @@
+/* Process Card ---------------------------------- */
+.process-card-wrap {
+   position: relative;
+   z-index: 1;
+   margin-top: 78px;
+
+   @include ml {
+      margin-top: 0px;
+   }
+
+   @include lg {
+      gap: 40px 0;
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      top: -48px;
+      left: 0;
+      width: 100%;
+      height: 52px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='874' height='52' viewBox='0 0 874 52' fill='none'%3E%3Cpath d='M1 11.4512C30.8833 0.643549 97.1931 -6.60964 131.313 46.7598C133.338 49.9265 137.668 50.8156 140.679 48.5659C191.926 10.2762 312.342 -36.7023 431.309 50.2584C433.478 51.8443 436.441 51.8924 438.622 50.3222C490.546 12.9383 614.625 -35.1582 729.567 48.921C732.463 51.0394 736.613 50.3076 738.808 47.4689C755.391 26.0201 799.607 -4.52152 873 11.4512' stroke='white'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+      z-index: -1;
+
+      @include ml {
+         display: none;
+      }
+   }
+
+   .process-card {
+      @include xs {
+         width: 100%;
+      }
+   }
+}
+
+.process-card {
+   position: relative;
+   text-align: left;
+   padding: 40px;
+   border-radius: 16px;
+   border: 1px solid $black-color5;
+   background: $black-color4;
+   backdrop-filter: blur(30px);
+
+   @include lg {
+      padding: 40px 30px;
+   }
+
+   @include lg {
+      padding: 30px 20px;
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: $white-color;
+      top: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 100px;
+   }
+
+   &::before {
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      transform: translateX(-50%);
+      z-index: -11;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      width: 119px;
+      height: 119px;
+      border-radius: 100px;
+      background: $theme-color;
+      content: '';
+
+      @include md {
+         display: none;
+      }
+   }
+
+   .box-bg-shape {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 16px;
+      }
+   }
+
+   @include lg {
+      gap: 30px;
+   }
+
+   .box-thumb-wrap {}
+
+   .box-number {
+      font-size: 84px;
+      font-weight: 700;
+      font-family: $title-font;
+      color: $border-color;
+      margin-top: -0.28em;
+      margin-bottom: -0.28em;
+      width: 100%;
+      position: relative;
+
+      @include lg {
+         font-size: 70px;
+      }
+
+      @include md {
+         font-size: 60px;
+      }
+
+      &:after {
+         content: '';
+         position: absolute;
+         width: 24px;
+         height: 24px;
+         border-radius: 50%;
+         background: linear-gradient(to left, $theme-color3, $theme-color);
+         top: -30px;
+         left: 50%;
+         transform: translate(-50%, 0);
+
+         @include lg {
+            display: none;
+         }
+      }
+   }
+
+   .box-thumb {
+      display: inline-block;
+      overflow: hidden;
+      flex: none;
+      width: 86px;
+      height: 86px;
+      border-radius: 86px;
+      border: 1px solid rgb(255, 255, 255, 0.2);
+      text-align: center;
+      line-height: 75px;
+      margin-bottom: -5px;
+
+      img {
+         width: 50px;
+         height: 50px;
+         object-fit: cover;
+         transition: 0.4s;
+      }
+   }
+
+   .box-title {
+      margin-bottom: 12px;
+      line-height: 1.416;
+      max-width: 200px;
+      color: $white-color;
+      font-size: 28px;
+      font-weight: 500;
+
+      @include ml {
+         max-width: 100%;
+      }
+
+      @include md {
+         font-size: 20px;
+      }
+
+   }
+
+   .box-text {
+      color: $gray-color5;
+      margin: 30px 0;
+
+      @include ml {
+         margin-top: 10px;
+      }
+   }
+
+   &:hover {
+      .box-thumb-wrap {
+         .box-thumb {
+            img {
+               transform: scale(1.1);
+            }
+         }
+      }
+
+      &::before {
+         opacity: 1;
+         visibility: visible;
+         transition-delay: 0s;
+      }
+
+      .box-bg-shape {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}
+
+.process1 {
+   border-radius: 24px;
+   padding-bottom: 474px;
+
+   @include ml {
+      border-radius: 0px;
+      padding-bottom: 374px;
+   }
+
+   @include lg {
+      padding-bottom: 330px;
+   }
+
+   @include md {
+      padding-bottom: 290px;
+   }
+
+   @include sm {
+      padding-bottom: 230px;
+   }
+}
+
+
+/* Process Card 2---------------------------------- */
+.process-img-box2 {
+   border-radius: 30px;
+   overflow: hidden;
+
+   img {
+      width: 100%;
+   }
+}
+
+.process-wrap2 {
+   position: relative;
+   max-width: 1720px;
+   margin: 0 auto;
+   z-index: 1;
+
+   &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 273px;
+      transform: translate(-50%, -50%);
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='273' viewBox='0 0 1172 273' fill='none'%3E%3Cpath d='M1.87581 196.276C66.9299 50.9978 285.176 -28.3161 379.5 12.4905C573.922 96.6022 451.5 244.991 538.5 267.491C618 313.366 564.638 -66.4984 901.5 106.991C933.667 157.657 1032.6 255.59 1171 241.99' stroke='%2329303D' stroke-width='2' stroke-dasharray='7 7'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+      z-index: -1;
+
+      @include ml {
+         display: none;
+      }
+   }
+
+   .row {
+      .col {
+         transform: rotate(15deg);
+         transition: 0.4s ease-in-out;
+
+         &:hover {
+            transform: rotate(0deg);
+         }
+
+         @include ml {
+            transform: rotate(0deg);
+            margin-top: 0;
+         }
+
+         &:nth-child(even) {
+            margin-top: 115px;
+            transform: rotate(-15deg);
+            transition: 0.4s ease-in-out;
+
+            &:hover {
+               transform: rotate(0deg);
+            }
+
+            @include ml {
+               margin-top: 0;
+               transform: rotate(0deg);
+            }
+         }
+      }
+   }
+}
+
+.process-card2 {
+   position: relative;
+   border-radius: 20px;
+   background: $white-color;
+   box-shadow: 0px 13px 44px 6px rgba(0, 0, 0, 0.10);
+   margin-top: 50px;
+   padding: 10px;
+   padding-top: 0;
+
+   @include lg {
+      margin-top: 80px;
+   }
+
+   .process-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 70px;
+      border: 5px solid $white-color;
+      background: $theme-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+   }
+
+   .box-number {
+      font-size: 80px;
+      line-height: 100px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #EDEDED 0%, #FFF 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      bottom: -20px;
+      z-index: -1;
+
+      @media (max-width:1699px) {
+         font-size: 70px;
+         line-height: 80px;
+      }
+
+      @include ml {
+         font-size: 60px;
+         line-height: 70px;
+      }
+   }
+
+   .box-content {
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.00);
+      background: $gray-color7;
+      padding: 40px 35px;
+
+      @include xxl {
+         padding: 30px 20px;
+      }
+   }
+
+
+   .box-title {
+      margin-bottom: -0.4em;
+      font-family: $body-font;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 34px;
+      text-transform: capitalize;
+
+
+      @include ml {
+         font-size: 18px;
+      }
+   }
+
+   .box-text {
+      margin-top: 10px;
+      color: $black-color3;
+      font-size: 16px;
+      font-weight: 400;
+      text-transform: capitalize;
+
+      @include ml {
+         font-size: 14px;
+      }
+   }
+
+
+}
+
+
+.process2 {
+
+   .th-slider {
+      padding-bottom: 28px;
+
+      @include ml {
+         padding-bottom: 0;
+      }
+   }
+
+   .title-area {
+      margin-top: 130px;
+
+      @include ml {
+         margin-top: 50px;
+      }
+   }
+
+   .img1 {
+      border-radius: 32px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+      }
+   }
+
+}
+
+// .slider-area.process-slider {
+//    .swiper-wrapper {
+//       padding-top: 125px;
+
+//       @include ml {
+//          padding-top: 0;
+//       }
+
+//       .swiper-slide {
+//          .process-card3.shape-mockup-wrap {
+//             position: relative;
+//             transition: 0.5s;
+//             top: 0;
+//          }
+
+//          &.swiper-slide-active {
+//             .process-card3.shape-mockup-wrap {
+//                top: -125px;
+
+//                @include ml {
+//                   top: 0;
+//                }
+//             }
+//          }
+//       }
+//    }
+// }
+
+.process-card3 {
+   position: relative;
+   border-radius: 24px;
+   background: $title-color;
+   overflow: hidden;
+   padding: 85px 55px;
+   // margin-top: 125px;
+
+   @include xxl {
+      margin: 0;
+      width: 100% !important;
+      padding: 40px 20px;
+   }
+
+   @include md {
+      padding: 50px 35px;
+   }
+
+   @include sm {
+      padding: 40px 20px;
+   }
+
+   .box-number {
+      color: $theme-color2;
+      font-size: 64px;
+      font-weight: 700;
+      font-family: $title-font;
+      margin-bottom: 37px;
+      display: block;
+
+      @include md {
+         font-size: 50px;
+      }
+
+      @include sm {
+         font-size: 30px;
+         margin-bottom: 20px;
+      }
+   }
+
+   .box-title {
+      color: $white-color;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+
+      @media (max-width:1599px) {
+         font-size: 44px;
+      }
+
+      @include ml {
+         font-size: 40px;
+      }
+
+      @include md {
+         font-size: 35px;
+         line-height: 45px;
+      }
+
+      @include sm {
+         font-size: 30px;
+         line-height: 40px;
+      }
+   }
+
+   .box-text {
+      color: $white-color;
+      font-size: 16px;
+      font-weight: 400;
+   }
+
+
+
+}
+
+.process-slider {
+   position: relative;
+   z-index: 1;
+   margin-top: -300px;
+
+   @include ml {
+      margin: 0;
+   }
+
+   @include md {
+      padding: 0 20px;
+   }
+
+   .slider-pagination-wrap {
+      display: flex;
+      align-items: end;
+      gap: 20px;
+      max-width: 753px;
+      position: relative;
+      margin: 0 auto;
+      margin-top: -50px;
+      justify-content: flex-start;
+
+      @media (max-width:1840px) {
+         // margin-right: 0px;
+         // top: 0;
+         max-width: 700px;
+      }
+
+      @media (max-width:1699px) {
+         max-width: 650px;
+      }
+
+      @media (max-width:1599px) {
+         max-width: 600px;
+      }
+
+      @include xxl {
+         max-width: 550px;
+      }
+
+      @include lg {
+         max-width: 450px;
+      }
+
+      @include ml {
+         top: 0;
+         margin-top: 30px;
+      }
+
+      @include md {
+         display: none;
+      }
+
+
+      .slider-pagination2 {
+         flex: none;
+
+         .current-slide {
+            font-size: 56px;
+            font-weight: 500;
+            font-family: $title-font;
+            color: $title-color;
+
+            @include sm {
+               font-size: 30px;
+            }
+         }
+
+         .divider,
+         .total-slides {
+            font-size: 20px;
+            font-family: $title-font;
+         }
+      }
+
+      .slider-pagination {
+         margin-top: 0;
+         bottom: 8px;
+      }
+
+      .slider-pagination.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+         background: $theme-color2;
+         height: 2px;
+
+      }
+
+   }
+
+   .swiper-slide {
+      margin-top: 120px;
+      transition: all 1.2s ease-out;
+      // width: 872px !important;
+
+      @include ml {
+         // width: 100% !important;
+         margin-top: 80px;
+      }
+
+      @include lg {
+         margin-top: 60px;
+      }
+
+      @include md {
+         margin: 0;
+      }
+   }
+
+   .swiper-slide-active {
+      // margin-top: 0px;
+      // width: 873px !important;
+      margin-top: 0 !important;
+      margin-bottom: 60px;
+
+      @include ml {
+         // width: 100% !important;
+      }
+
+      @include lg {
+         margin-bottom: 30px;
+      }
+
+      @include md {
+         margin-bottom: 0px;
+      }
+
+      .process-card3 {
+         // margin-top: 0px;
+      }
+   }
+}
+
+
+.process3 {
+
+
+   .process-card-wrap {
+      &:after {
+         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='874' height='52' viewBox='0 0 874 52' fill='none'%3E%3Cpath d='M1 11.4512C30.8833 0.643549 97.1931 -6.60964 131.313 46.7598C133.338 49.9265 137.668 50.8156 140.679 48.5659C191.926 10.2762 312.342 -36.7023 431.309 50.2584C433.478 51.8443 436.441 51.8924 438.622 50.3222C490.546 12.9383 614.625 -35.1582 729.567 48.921C732.463 51.0394 736.613 50.3076 738.808 47.4689C755.391 26.0201 799.607 -4.52152 873 11.4512' stroke='%23A3A3A3'/%3E%3C/svg%3E") no-repeat center;
+      }
+   }
+
+   .process-card {
+      backdrop-filter: none;
+
+
+      &::before {
+         opacity: 0;
+         visibility: hidden;
+         transition: all 0.5s ease-in-out;
+         top: 0;
+      }
+
+      &::after {
+         background: $theme-color2;
+         transition: all 0.3s ease-in-out;
+      }
+
+      .box-bg-shape {
+         background: $title-color;
+         border-radius: 16px;
+         transition: all 0 ease-in-out;
+         opacity: 1;
+         visibility: visible;
+
+         img {
+            display: none;
+         }
+      }
+
+
+
+      &:hover {
+
+
+         &::before {
+            opacity: 1;
+            visibility: visible;
+            top: -30px;
+         }
+
+         .box-bg-shape {
+            opacity: 1;
+            visibility: visible;
+         }
+
+         &::after {
+            background: $white-color;
+         }
+      }
+   }
+}

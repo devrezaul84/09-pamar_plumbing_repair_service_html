@@ -1,0 +1,268 @@
+/* Counter 1 ---------------------------------- */
+.counter-card {
+   text-align: center;
+   padding: 37.6px 0;
+
+   .box-number {
+      margin-top: -0.22em;
+      margin-bottom: -0.1em;
+   }
+
+   .box-text {
+      max-width: 186px;
+      font-size: 18px;
+      font-weight: 500;
+      display: inline-block;
+
+      @include sm {
+         font-size: 16px;
+         max-width: 170px;
+      }
+   }
+}
+
+.counter-wrap1 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: $title-color;
+   padding: 0 80px;
+   border-radius: 0 0 24px 24px;
+   border-bottom: 1px solid $theme-color;
+
+   .divider {
+      width: 1px;
+      height: 180px;
+      background: $body-color;
+
+      &:last-of-type {
+         display: none;
+      }
+
+      @include md {
+         display: none;
+      }
+   }
+
+   @include lg {
+      padding: 0 40px;
+   }
+
+   @include md {
+      flex-wrap: wrap;
+      gap: 40px 0;
+      padding: 60px;
+
+      .counter-card {
+         flex: 50%;
+         padding: 0;
+      }
+   }
+
+   @include sm {
+      padding: 40px;
+   }
+
+   @include xs {
+      padding: 40px 20px;
+   }
+
+   @include vxs {
+      .counter-card {
+         flex: 100%;
+      }
+   }
+}
+
+/* Counter 2 ---------------------------------- */
+.counter-area-2 {
+   margin: 0 auto;
+   max-width: 1840px;
+   border-radius: 24px;
+
+   @include xs {
+      border-radius: 0;
+   }
+
+   &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(1, 9, 22, 0.8);
+      z-index: -1;
+   }
+
+   &.style2 {
+      max-width: 100%;
+      border-radius: 0;
+      padding: 109px 0;
+      background-color: $black-color6;
+
+      @include md {
+         padding: 80px 0;
+      }
+
+      &::before {
+         display: none;
+      }
+   }
+}
+
+.counter-card2 {
+   text-align: center;
+   padding: 30px;
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   border: 1px solid $border-color4;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .media-body {
+      transform: rotate(45deg);
+   }
+
+   @include md {
+      width: 270px;
+      height: 270px;
+   }
+
+   .box-number {
+      margin-top: -0.22em;
+      margin-bottom: -0.1em;
+      font-size: 44px;
+      font-weight: 500;
+      color: $theme-color2;
+      font-size: 84px;
+      font-weight: 500;
+      text-transform: capitalize;
+      font-family: $title-font;
+
+      @include md {
+         font-size: 60px;
+      }
+
+      span {
+         color: $white-color;
+         font-family: $title-font;
+      }
+   }
+
+   .box-text {
+      font-family: $title-font;
+      color: $gray-color3;
+      margin-bottom: -0.4em;
+      margin-top: 10px;
+      color: $white-color;
+      font-size: 18px;
+      text-transform: uppercase;
+   }
+
+   &.style2 {
+      border: 0;
+      padding: 0;
+      width: 250px;
+      height: auto;
+
+      @include lg {
+         width: 210px;
+      }
+
+      @include md {
+         width: 48%;
+      }
+
+      @include sm {
+         width: 100%;
+      }
+
+      .media-body {
+         transform: rotate(0deg);
+      }
+
+      &:nth-child(2) {
+         .media-body {
+            transform: rotate(0deg);
+         }
+      }
+
+      &:nth-child(3) {
+         .media-body {
+            transform: rotate(0deg);
+         }
+      }
+
+      &:last-child {
+         .media-body {
+            transform: rotate(0deg);
+         }
+      }
+
+      .box-number {
+         font-size: 74px;
+         font-weight: 700;
+         color: $theme-color2;
+
+         @include md {
+            font-size: 60px;
+         }
+
+         @include lg {
+            font-size: 40px;
+         }
+
+         span {
+            color: $theme-color2;
+         }
+      }
+
+      .box-text {
+         margin-top: 1px;
+         font-size: 24px;
+         text-transform: capitalize;
+         color: $white-color;
+
+         @include lg {
+            font-size: 20px;
+         }
+      }
+   }
+
+   &:nth-child(2) {
+      .media-body {
+         transform: rotate(-30deg);
+      }
+   }
+
+   &:nth-child(3) {
+      .media-body {
+         transform: rotate(30deg);
+      }
+   }
+
+   &:last-child {
+      .media-body {
+         transform: rotate(320deg);
+      }
+   }
+}
+
+.counter-wrap2 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 24px;
+
+   @include ml {
+      justify-content: center;
+   }
+
+   @include md {
+      gap: 30px 24px;
+   }
+}

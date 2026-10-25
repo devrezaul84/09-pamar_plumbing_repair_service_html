@@ -1,0 +1,490 @@
+//Call to action 1---------------------------------------
+.cta-wrap1,
+.cta-wrap4 {
+   .text-stroke {
+      color: transparent;
+      -webkit-text-stroke: 1px $body-color;
+
+   }
+
+   .sec-text2 {
+      padding-top: 28px;
+   }
+
+   .btn-group {
+      margin-top: 48px;
+   }
+}
+
+.cta-wrap4 {
+   .th-btn {
+      padding: 20px 28px;
+
+      @include sm {
+         padding: 17px 28px;
+      }
+   }
+
+   .th-btn.style8.style11.style12 {
+      @include sm {
+         padding: 16px 28px;
+      }
+   }
+}
+
+.cta-img {
+   position: relative;
+   overflow: hidden;
+   margin-right: 30px;
+   max-width: 726px;
+
+   img {
+      border-radius: 32px;
+   }
+
+   @include lg {
+      margin-right: 0;
+   }
+
+   .play-btn {
+      position: absolute;
+      right: 32px;
+      bottom: 32px;
+   }
+}
+
+.cta-shape1-1 {
+   @media (max-width:1799px) {
+      max-width: 150px;
+   }
+}
+
+.cta-thumb1-1-shape,
+.cta-thumb1-2-shape {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -11;
+   width: 100%;
+   height: 100%;
+
+
+
+   &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: $black-color7;
+      content: '';
+      z-index: -1;
+   }
+
+   img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+   }
+
+}
+
+.cta-thumb1-2-shape {
+   &::before {
+      background: $gray-color;
+   }
+}
+
+//Call to action 2---------------------------------------
+.cta-wrap2 {
+
+
+   .cta-thumb2 {
+      max-width: 685px;
+      height: 524px;
+      position: relative;
+
+      @include md {
+         display: flex;
+         gap: 20px;
+         flex-wrap: wrap;
+         max-width: 100%;
+         height: 100%;
+         padding-bottom: 80px;
+      }
+
+      @include xs {
+         justify-content: center;
+      }
+   }
+
+   .cta-thumb-box {
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white-color;
+      border-radius: 100%;
+      transition: all .3s ease-in-out;
+      position: absolute;
+
+      &::before {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         content: '';
+         width: 90%;
+         height: 90%;
+         border: 2px dotted transparent;
+         border-radius: 100%;
+         transform: translate(-50%, -50%);
+         transition: all .3s ease-in-out;
+
+         @include md {
+            display: none;
+         }
+      }
+
+      @include md {
+         position: unset;
+         width: 48%;
+         width: 200px;
+         height: 200px;
+      }
+
+      span {
+         color: $title-color;
+         font-size: 24px;
+         font-weight: 700;
+         display: block;
+         transition: all .3s ease-in-out;
+      }
+
+      &:hover {
+         &::before {
+            border: 2px dotted $theme-color;
+         }
+
+         span {
+            color: $theme-color;
+         }
+      }
+
+      &:nth-child(1) {
+         top: 70px;
+         left: 0;
+      }
+
+      &:nth-child(2) {
+         top: 0px;
+         left: 290px;
+         width: 184px;
+         height: 184px;
+
+         @include ml {
+            left: 300px;
+         }
+
+         @include md {
+            width: 200px;
+            height: 200px;
+         }
+      }
+
+      &:nth-child(3) {
+         top: auto;
+         bottom: 0;
+         left: 220px;
+         width: 184px;
+         height: 184px;
+
+         @include ml {
+            left: 150px;
+         }
+
+         @include lg {
+            left: 50px;
+         }
+
+         @include md {
+            width: 200px;
+            height: 200px;
+         }
+      }
+
+      &:nth-child(4) {
+         top: auto;
+         bottom: 0;
+         left: auto;
+         right: 0;
+      }
+   }
+
+
+   // &:after {
+   //    content: '';
+   //    position: absolute;
+   //    inset: 0;
+   //    background: $theme-color;
+   //    mix-blend-mode: hue;
+   //    z-index: -1;
+   // }
+
+
+}
+
+.cta-thumb-info {
+   max-width: 470px;
+   background: $black-color10;
+   border-radius: 30px;
+   overflow: hidden;
+   margin-top: 250px;
+
+   @include md {
+      margin-top: 0;
+      margin-bottom: 30px;
+   }
+
+   .box-title {
+      font-size: 24px;
+      font-weight: 700;
+      display: block;
+      background: $theme-color;
+      padding: 22px;
+      padding-bottom: 13px;
+   }
+
+   .cta-thumb {
+      padding: 50px;
+      padding-bottom: 240px;
+
+      @include lg {
+         padding: 30px 20px;
+         padding-bottom: 190px;
+      }
+
+      @include md {
+         padding-bottom: 30px;
+      }
+   }
+
+   .cta-thumb-item {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid $border-color5;
+      display: flex;
+      align-items: center;
+      gap: 0 15px;
+
+      @include xs {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 15px;
+      }
+
+      .box-thumb {
+         width: 60px;
+         height: 60px;
+         line-height: 58px;
+         text-align: center;
+         border-radius: 100%;
+         border: 1px dotted $black-color11;
+         display: block;
+         color: $white-color;
+         font-size: 20px;
+         border-radius: 100px;
+         background: $gray-color6;
+
+         @include xs {
+            font-size: 16px;
+         }
+      }
+
+      .box-content {
+         span {
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 500;
+         }
+
+         h3 {
+            color: $white-color;
+            font-family: $body-font;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0;
+
+            @include xs {
+               font-size: 16px;
+            }
+         }
+      }
+
+      &:last-child {
+         padding: 0;
+         border-bottom: 0;
+         margin-bottom: 0;
+      }
+   }
+
+}
+
+.cta-area-2 {
+   position: relative;
+   z-index: 1;
+
+   &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(1, 9, 22, 0.32);
+      z-index: -1;
+   }
+}
+
+.cta-area-3 {
+   position: relative;
+   z-index: 1;
+}
+
+.cta-wrap3 {
+   padding: 60px;
+   position: relative;
+   z-index: 11;
+
+   @include ml {
+      padding: 30px;
+   }
+
+   @include lg {
+      padding: 90px 0px;
+      text-align: center;
+      background: $white-color;
+      border-radius: 20px;
+   }
+
+   @include md {
+      padding: 80px 0px;
+   }
+
+   @include sm {
+      padding: 60px 10px;
+   }
+
+   &::before {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: $white-color;
+      z-index: -1;
+      border-radius: 20px;
+      transform: translate(-50%, -50%);
+
+      @include lg {
+         display: none;
+      }
+   }
+
+   &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      content: '';
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 80px;
+      background: $gray-color2;
+
+      @include lg {
+         display: none;
+      }
+   }
+
+   .cta-bg-shape3-1 {
+      top: auto;
+      position: absolute;
+      left: 50px;
+      z-index: -11;
+      bottom: -130px;
+
+      @include lg {
+         display: none;
+      }
+   }
+
+   .cta-bg-shape3-2 {
+      top: auto;
+      position: absolute;
+      right: 0;
+      z-index: -11;
+      bottom: -130px;
+
+      @include lg {
+         display: none;
+      }
+   }
+
+
+   .cta-thumb-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+
+      @include lg {
+         justify-content: center;
+         flex-direction: column;
+         gap: 30px;
+      }
+
+
+      .box-icon {
+         width: 80px;
+         height: 80px;
+         background: $theme-color;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .box-title {
+         color: $title-color;
+         font-family: $body-font;
+         font-size: 24px;
+         font-weight: 700;
+         margin-bottom: 0;
+      }
+
+      .box-text {
+         color: $black-color3;
+         font-size: 16px;
+         font-weight: 400;
+         margin: 0;
+         max-width: 376px;
+      }
+
+      &.style2 {
+         padding-left: 60px;
+
+         @include lg {
+            padding-left: 0px;
+            padding-top: 50px;
+         }
+
+         .box-icon {
+            background: $theme-color3;
+         }
+      }
+   }
+}

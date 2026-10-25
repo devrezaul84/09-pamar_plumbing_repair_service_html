@@ -1,0 +1,25 @@
+.error-page-wrap {}
+
+.error-content {
+	text-align: center;
+	flex: 1;
+	align-self: center;
+	padding: 60px 0 0;
+
+	.error-text {
+		max-width: 580px;
+		margin-left: auto;
+		margin-right: auto;
+		color: $black-color3;
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.th-btn::after {
+		transform: rotate(-180deg);
+	}
+}
+
+.error-img {
+	text-align: center;
+}

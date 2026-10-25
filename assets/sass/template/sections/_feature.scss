@@ -1,0 +1,371 @@
+/* Feature card ---------------------------------- */
+.feature-area-1 {
+   &:before {
+      mix-blend-mode: hue;
+   }
+}
+
+.feature-bg-img1 {
+   position: absolute;
+   inset: 0;
+   z-index: 1;
+
+   &:before {
+      backdrop-filter: blur(15.3px);
+   }
+}
+
+.feature-card {
+   padding: 24px 44px 34px 24px;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   transition: 0.4s;
+   border-radius: 24px;
+   border: 1px solid $border-color;
+   display: flex;
+   gap: 24px;
+   
+   @include md {
+      flex-direction: column;
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.01);
+      backdrop-filter: blur(15.9px);
+      z-index: -1;
+   }
+
+   .box-icon {
+      display: flex;
+      width: 80px;
+      height: 80px;
+      padding: 15px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 24px;
+      background: $gray-color;
+
+      img {
+         transition: 0.4s ease-in-out;
+      }
+   }
+
+   .feature-card-details {
+      width: calc(100% - 100px);
+      overflow: hidden;
+      margin-top: 10px;
+
+      @include md {
+         width: 100%;
+         margin-top: 0;
+      }
+   }
+
+   .box-title {
+      font-size: 24px;
+      font-weight: 700;
+      transition: 0.4s;
+      margin-bottom: 8px;
+      color: $title-color;
+
+      @include xl {
+         font-size: 22px;
+      }
+
+      @include lg {
+         font-size: 24px;
+      }
+   }
+
+   .box-text {
+      margin-bottom: 25px;
+      transition: 0.4s;
+      color: $black-color3;
+   }
+
+   &:hover {
+      .box-icon {
+         img {
+            transform: scale(-1) rotate(180deg);
+         }
+      }
+   }
+   @include xl {
+      display: block;
+      padding: 24px 24px 34px 24px;
+      .feature-card-details {
+         width: 100%;
+      }
+      .box-icon {
+         margin-bottom: 25px;
+      }
+   }
+   @include lg {
+      .box-title {
+         font-size: 24px;
+      }
+   }
+}
+
+/* Feature card 2---------------------------------- */
+.feature-card.style2 {
+   padding: 32px;
+   background: $white-color;
+   border: 0;
+   flex-direction: column;
+   gap: 0;
+
+   .box-img {
+      margin-bottom: 24px;
+
+      img {
+         transition: 0.4s;
+      }
+   }
+
+   .box-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+
+      @include ml {
+         font-size: 24px;
+         margin-bottom: 22px;
+      }
+   }
+
+   .box-text {
+      color: $gray-color3;
+      margin-bottom: 0;
+   }
+
+   &:hover {
+      .box-img {
+         img {
+            transform: scale(1.1);
+         }
+      }
+   }
+}
+
+/* Feature card 3---------------------------------- */
+.feature-wrap3 {
+   display: flex;
+   border-top: 1px solid $border-color;
+
+   .feature-tab {
+      display: block;
+      width: 50%;
+      border: 0;
+
+      .nav-item {
+         display: block;
+
+         .nav-link {
+            font-size: 54px;
+            font-weight: 700;
+            font-family: $title-font;
+            text-transform: uppercase;
+            background: transparent;
+            padding: 30px 0;
+            border: 0;
+            border-bottom: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            width: 100%;
+            text-align: start;
+            margin: 0;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            line-height: 0.73;
+            color: $title-color;
+            flex-wrap: wrap;
+
+            @include xxl {
+               font-size: 46px;
+               padding: 31px 0;
+               gap: 60px;
+            }
+
+            @include ml {
+               font-size: 36px;
+               padding: 29px 0;
+            }
+
+            @include xl {
+               font-size: 30px;
+               padding: 29px 0;
+            }
+
+            .box-number {
+               font-size: 16px;
+               font-weight: 500;
+               color: $title-color;
+            }
+
+            &.active {
+               color: transparent;
+               background: linear-gradient(-90deg, $theme-color3 0%, $theme-color 100%);
+               -webkit-background-clip: text;
+            }
+         }
+      }
+   }
+
+   .tab-content {
+      width: 50%;
+      padding: 30px 0 0 30px;
+
+      .feature-tab-content-wrap {
+         display: flex;
+         gap: 30px;
+      }
+
+      .feature-tab-thumb {
+         width: calc(50% - 15px);
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      .feature-tab-content {
+         width: calc(50% - 15px);
+         align-self: center;
+
+         .box-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @include ml {
+               font-size: 30px;
+            }
+
+            @include sm {
+               font-size: 24px;
+            }
+         }
+      }
+   }
+
+   @include lg {
+      display: block;
+
+      .feature-tab {
+         width: 100%;
+         display: flex;
+         border-left: 1px solid $border-color;
+
+         .nav-item {
+            width: 50%;
+
+            .nav-link {
+               padding: 30px 30px;
+               gap: 40px;
+            }
+         }
+      }
+
+      .tab-content {
+         width: 100%;
+         padding: 30px 0 0;
+      }
+   }
+
+   @include md {
+      .feature-tab {
+         .nav-item {
+            width: 100%;
+         }
+      }
+   }
+
+   @include sm {
+      .feature-tab {
+         .nav-item {
+            .nav-link {
+               font-size: 24px;
+               gap: 20px;
+            }
+         }
+      }
+   }
+
+   @include xs {
+      .tab-content .feature-tab-content-wrap {
+         display: block;
+
+         .feature-tab-thumb {
+            width: 100%;
+         }
+
+         .feature-tab-content {
+            width: 100%;
+            margin-top: 30px;
+
+            .box-title {
+               font-size: 24px;
+            }
+         }
+      }
+   }
+
+   @include vxs {
+      .feature-tab {
+         .nav-item {
+            .nav-link {
+               padding: 30px 20px;
+            }
+         }
+      }
+   }
+}
+
+/* Feature card 4---------------------------------- */
+.feature-card.style3 {
+   background: $white-color;
+   border-radius: 20px;
+   border: 1px solid $border-color;
+
+   .box-title {
+      color: $title-color;
+   }
+
+   .box-text {
+      color: $body-color;
+   }
+}
+
+.feature-img-box4 {
+   position: relative;
+   display: inline-block;
+
+   .img3,
+   .img2,
+   .img1 {
+      border-radius: 20px;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   .img2 {
+      transform: rotate(30deg);
+
+      @include sm {
+         transform: none;
+      }
+   }
+}

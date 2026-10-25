@@ -1,0 +1,65 @@
+/* Chatbot Area 1 ---------------------------------- */
+.chatbot-site-wrap {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    a {
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+.chatbot-form {
+    background: $smoke-color;
+    border-radius: 30px;
+    padding: 40px;
+    .form-title {
+        background: $theme-color;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $white-color;
+        font-family: $title-font;
+        padding: 22px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+        margin: -30px -30px 30px;
+        .new-chat-btn {
+            margin-left: auto;
+            color: $white-color;
+            background: rgba($color: #ffffff, $alpha: 0.3);
+            border-radius: 10px;
+            display: block;
+            padding: 12px 20px;
+            margin: -12px -20px -12px auto;
+            &:hover {
+                background: $white-color;
+                color: $theme-color;
+            }
+        }
+    }
+    .form-btn {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        @include md {
+            justify-content: start;
+        }
+    }
+    @include xs {
+        .form-title {
+            font-size: 16px;
+            display: block;
+            text-align: center;
+            .new-chat-btn {
+                margin: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+}

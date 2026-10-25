@@ -1,0 +1,638 @@
+/* Consulting Area 1 ---------------------------------- */
+.consulting-wrap1 {
+   border-radius: 40px;
+
+   //  padding: 20px;
+   .page-img {
+      margin-left: -260px;
+      margin-right: 110px;
+
+      @include xxl {
+         height: 600px;
+         margin-left: 0px;
+         margin-right: 0px;
+
+         img {
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      @include sm {
+         height: 400px;
+      }
+   }
+
+   @include sm {
+      border-radius: 20px;
+   }
+}
+
+.contact-thumb1-1-shape {
+   position: absolute;
+   top: 0;
+   right: 40px;
+   bottom: 0;
+   z-index: -1;
+
+   @include xxl {
+      right: 0px;
+   }
+
+   &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 00;
+      width: 100%;
+      height: 100%;
+      background: $theme-color;
+      content: '';
+      z-index: -1;
+   }
+
+   img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+   }
+}
+
+.consulting-form-wrap1 {
+   //  padding: 28px 40px;
+   //  @include ml {
+   //      padding: 40px 40px 40px;
+   //  }
+   //  @include md {
+   //      padding: 40px 30px 30px;
+   //  }
+   //  @include sm {
+   //      padding: 40px 20px 20px;
+   //  }
+   //  @include xs {
+   //      padding: 30px 10px 10px;
+   //  }
+
+   .title-area{
+      @include sm{
+         text-align: center;
+      }
+   }
+}
+
+/* Contact Area 1 ---------------------------------- */
+.contact-thumb1-1 {
+   position: absolute;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   width: 45%;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   @include lg {
+      position: relative;
+      width: 100%;
+      top: -150px;
+   }
+
+   @include md {
+      top: -80px;
+   }
+}
+
+.contact-form.style-border {
+   border: 1px solid $border-color;
+   border-radius: 50px;
+   padding: 60px;
+
+   @include md {
+      border-radius: 40px;
+      padding: 40px;
+   }
+
+   @include xs {
+      padding: 30px;
+   }
+}
+
+/* Contact Area 2 ---------------------------------- */
+.contact-title-wrap {
+   max-width: 713px;
+}
+
+.contact-thumb2-1 {
+   @include lg {
+      display: none;
+   }
+}
+
+.contact-form-v2 {
+   background: $title-color;
+   padding: 56px;
+
+   .title-area {
+      .sub-title {
+         font-size: 18px;
+         padding-bottom: 0;
+         margin-bottom: 15px;
+      }
+
+      .title {
+         font-size: 40px;
+
+         @include lg {
+            font-size: 36px;
+         }
+
+         @include sm {
+            font-size: 34px;
+         }
+
+         @include lg {
+            font-size: 28px;
+         }
+      }
+   }
+
+   @include xs {
+      padding: 40px 30px;
+
+      .title-area .sub-title {
+         font-size: 16px;
+      }
+   }
+}
+
+.contact-info {
+   background: $white-color;
+   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.07);
+   border-radius: 30px;
+   padding: 40px;
+   text-align: center;
+
+   .box-icon {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: $theme-color;
+      color: $white-color;
+      font-size: 40px;
+      margin-bottom: 24px;
+   }
+
+   .box-title {
+      color: $title-color;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 0;
+   }
+
+   .box-text {
+      font-size: 16px;
+      color: $body-color;
+      margin-top: 10px;
+      line-height: 1.4;
+      display: grid;
+
+      a {
+         color: $body-color;
+
+         &:hover {
+            color: $theme-color;
+         }
+      }
+   }
+
+   @include md {
+      .box-title {
+         font-size: 24px;
+      }
+   }
+
+   @include xs {
+      display: block;
+
+      .box-icon {
+         margin-bottom: 25px;
+      }
+
+      .box-text {
+         margin-bottom: -0.3em;
+      }
+
+      .box-title {
+         font-size: 24px;
+      }
+   }
+}
+
+.contact-info2 {
+   text-align: center;
+
+   @include sm {
+      max-width: 350px;
+      margin: 0 auto;
+   }
+
+   .box-icon {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: $white-color;
+      color: $theme-color;
+      font-size: 24px;
+      box-shadow: 0px 21px 47px rgba(15, 21, 31, 0.21);
+      position: relative;
+      margin-bottom: -30px;
+      transition: all .3s ease-in-out;
+   }
+
+   .box-content {
+      background: $white-color;
+      padding: 37px 55px;
+      padding-top: 0;
+
+      @include ml {
+         padding: 37px 20px;
+         padding-top: 0;
+      }
+   }
+
+   .box-title {
+      color: var(--Natural-color-Black-2, #010916);
+      font-family: $body-font;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding-top: 71px;
+      padding-bottom: 15px;
+      position: relative;
+      margin-bottom: 10px;
+
+      &::before {
+         position: absolute;
+         left: 50%;
+         bottom: 0;
+         width: 29px;
+         height: 2px;
+         content: '';
+         transform: translateX(-50%);
+         background: $gray-color2;
+      }
+   }
+
+   .box-text {
+      font-size: 16px;
+      display: grid;
+
+      @include lg {
+         font-size: 14px;
+      }
+
+      a {
+         color: $black-color3;
+         text-transform: capitalize;
+
+         &:hover {
+            color: $theme-color;
+         }
+
+      }
+
+      span {
+         color: $theme-color3;
+         font-size: 14px;
+         font-weight: 700;
+         text-transform: uppercase;
+      }
+
+   }
+
+   &:hover {
+      .box-icon {
+         background: $theme-color;
+         color: $white-color;
+      }
+   }
+}
+
+.contact-info-wrap2 {
+   display: flex;
+   justify-content: space-between;
+   background: $title-color;
+   flex-wrap: wrap;
+   gap: 30px 30px;
+   padding: 40px;
+   margin: 0 -40px;
+   margin-top: -160px;
+   position: relative;
+   z-index: 1;
+
+   .contact-info {
+      width: calc(25% - 30px);
+      padding: 0;
+   }
+
+   @include xxl {
+      margin: -160px 0 0;
+
+      .contact-info {
+         width: calc(50% - 30px);
+      }
+   }
+
+   @include lg {
+      margin-top: 60px;
+   }
+
+   @include md {
+      .contact-info {
+         width: 100%;
+      }
+   }
+
+   @include xs {
+      gap: 40px 30px;
+      padding: 40px 30px;
+      margin-top: 40px;
+   }
+}
+
+/* Contact Area 4 ---------------------------------- */
+.contact-form-v3 {
+   background: $title-color;
+   padding: 48px;
+   border: 1px solid $body-color;
+   border-radius: 8px;
+
+   .title-area {
+      .sub-title {
+         font-size: 18px;
+         padding-bottom: 0;
+         margin-bottom: 15px;
+      }
+
+      .title {
+         font-size: 40px;
+
+         @include lg {
+            font-size: 36px;
+         }
+
+         @include sm {
+            font-size: 34px;
+         }
+
+         @include lg {
+            font-size: 28px;
+         }
+      }
+   }
+
+   @include xs {
+      padding: 40px 30px;
+
+      .title-area .sub-title {
+         font-size: 16px;
+      }
+   }
+}
+
+.contact-info.style2 {
+   background: transparent;
+   padding: 0;
+   gap: 24px;
+
+   .box-icon {
+      border: 1px solid $white-color;
+      border-radius: 8px;
+
+      &:after {
+         display: none;
+      }
+   }
+}
+
+.contact-info.style3 {
+   background: transparent;
+   padding: 0;
+   gap: 12px;
+   box-shadow: 0px 10px 50px transparent;
+   border-radius: 0;
+   display: flex;
+   align-items: center;
+   text-align: left;
+
+   .box-icon {
+      border: 0;
+      border-radius: 50%;
+      height: 48px;
+      width: 48px;
+      font-size: 20px;
+      margin-bottom: 0;
+
+      &:after {
+         display: none;
+      }
+   }
+
+   .box-text {
+      margin: 0;
+      margin-bottom: 5px;
+      color: $black-color3;
+   }
+
+}
+
+/* Team Details Contact Form ---------------------------------- */
+.contact-form-v4 {
+   padding: 56px;
+   border-radius: 30px;
+
+   @include xs {
+      padding: 40px 30px;
+   }
+}
+
+/* Contact Page ---------------------------------- */
+.contact-page-v1 {
+   position: relative;
+
+   .contact-map {
+      height: 398px;
+
+      iframe {
+         height: 100%;
+      }
+   }
+}
+
+.contact-page-contact-form-wrap {
+   display: flex;
+   background: $smoke-color;
+   border-radius: 16px;
+   overflow: hidden;
+
+   .contact-form-wrap {
+      flex: 1;
+      align-self: center;
+      padding: 56px;
+   }
+
+   .contact-page-thumb1-1 {
+      flex: 1;
+
+      img {
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   @include md {
+      display: block;
+   }
+
+   @include xs {
+      .contact-form-wrap {
+         padding: 40px 30px;
+      }
+   }
+}
+
+
+// contact-info ---4
+.contact-info {
+   &.style4 {
+      background: $gray-color;
+      padding: 0;
+      gap: 12px;
+      box-shadow: 0px 10px 50px transparent;
+      border-radius: 8px;
+      display: flex;
+      align-items: start;
+      text-align: left;
+      padding: 30px;
+
+      .box-icon {
+         border: 0;
+         border-radius: 50%;
+         height: 48px;
+         width: 48px;
+         font-size: 20px;
+         margin-bottom: 0;
+         background: $theme-color;
+         flex: none;
+
+         &:after {
+            display: none;
+         }
+      }
+
+      .box-title {
+         font-size: 20px;
+         font-weight: 500;
+         margin-bottom: 0;
+      }
+
+      .box-text {
+         margin: 0;
+         margin-bottom: 5px;
+         color: $black-color3;
+         max-width: 238px;
+      }
+   }
+}
+
+// contact-form-v5
+.contact-form-v5 {
+   padding: 70px 0;
+
+   @include ml {
+      padding: 70px 30px;
+   }
+
+   @include vxs {
+      padding: 70px 20px;
+   }
+
+   .form-group select,
+   .form-group.style3 input {
+      height: 56px;
+      background-color: $white-color;
+   }
+
+   .form-group.style3 input {
+      color: #101111;
+      font-family: $title-font;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: capitalize;
+   }
+
+   .form-group {
+      label {
+         color: $title-color;
+         font-family: $title-font;
+         font-size: 18px;
+         font-weight: 500;
+         text-transform: capitalize;
+         margin-bottom: 20px;
+
+         span {
+            color: $theme-color;
+         }
+      }
+   }
+
+   .custom-checkbox {
+      label {
+         color: $title-color;
+         font-family: $body-font;
+         font-size: 16px;
+         font-weight: 500;
+         text-transform: capitalize;
+
+         span {
+            color: $theme-color;
+         }
+      }
+   }
+
+   input[type=checkbox]:checked~label:before {
+      background-color: $theme-color;
+      border: 1px solid $theme-color;
+   }
+
+   input[type=checkbox]~label:before {
+      border: 1px solid $border-color;
+      height: 20px;
+      width: 20px;
+   }
+
+   .checkbox-wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0 30px;
+   }
+
+   .th-btn {
+      padding: 20px 24px;
+      justify-content: space-between;
+
+      &::after {}
+   }
+}

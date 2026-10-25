@@ -1,0 +1,1007 @@
+/* Hero Global ---------------------------------- */
+.th-hero-wrapper {
+   position: relative;
+   z-index: 2;
+   overflow: hidden;
+}
+
+.th-hero-bg {
+   position: absolute;
+   inset: 0;
+   z-index: -1;
+
+   img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+   }
+}
+
+/* Hero 1 ---------------------------------- */
+.hero-title {
+   line-height: 1.222;
+   margin-bottom: 20px;
+   margin-top: -0.25em;
+
+   span {
+      display: block;
+
+      .text-theme {
+         display: inline-block;
+      }
+   }
+}
+
+.hero-text {
+   margin-bottom: 35px;
+   font-size: 16px;
+}
+
+.hero-1 {
+   position: relative;
+   max-width: 1840px;
+   margin: 0 auto;
+   margin-top: 69px;
+
+   &:after {
+      background: $black-color;
+      opacity: 0.3;
+      mix-blend-mode: soft-light;
+
+      @include lg {
+         opacity: 0.7;
+      }
+   }
+
+   .swiper-slide {
+      &::after {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         content: '';
+         z-index: -1;
+         background:
+            linear-gradient(270deg, rgba(1, 9, 22, 0.00) 29.84%, #010916 100%),
+      }
+   }
+
+   .scroll-down {
+      transform: rotate(90deg);
+      position: absolute;
+      bottom: 90px;
+      right: 20px;
+      text-align: center;
+      z-index: 2;
+      color: $white-color;
+   }
+
+   @media (max-width: 1699px) {
+      .scroll-down {
+         display: none
+      }
+   }
+
+   .scroll-down .scroll-wrap {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: $white-color;
+      font-weight: 300
+   }
+
+   .scroll-down .scroll-wrap span {
+      min-width: 40px;
+      padding-left: 15px;
+   }
+
+   .scroll-down .scroll-wrap span img {
+      transform: rotate(270deg);
+   }
+
+   .icon-box {
+      position: absolute;
+      bottom: 0;
+      left: 19%;
+      transform: translateX(-50%);
+      z-index: 1;
+
+      @media (max-width:1399px) {
+         left: 150px;
+      }
+
+      @include md {
+         display: none;
+      }
+   }
+   @include md {
+      mask-image: none !important;
+   }
+}
+
+@keyframes scrollMove {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateY(10px);
+   }
+}
+
+.hero-style1 {
+   position: relative;
+   z-index: 6;
+   padding: 285px 0 248px;
+   max-width: 712px;
+
+   @include xxl {
+      padding: 250px 0 240px;
+   }
+
+
+
+   @include xl {
+      padding: 220px 0;
+   }
+
+   @include ml {
+      padding: 220px 0 160px;
+   }
+
+   @include sm {
+      padding: 200px 0 140px;
+   }
+
+   .hero-text {
+      font-size: 16px;
+      font-weight: 400;
+      max-width: 665px;
+
+      @include xl {
+         margin-bottom: 30px;
+      }
+   }
+
+   .btn-wrap {
+      gap: 24px;
+      margin-top: 36px;
+
+
+   }
+
+   .th-btn {
+      @include sm {
+         padding: 17px 24px
+      }
+   }
+
+   .th-btn.style2 {
+      @include sm {
+         padding: 16px 24px
+      }
+   }
+
+
+   @include ml {
+      .sub-title {
+         font-size: 20px;
+      }
+   }
+
+   @include lg {
+
+      .sub-title {
+         margin-bottom: 26px;
+      }
+
+
+
+      .btn-wrap {
+         justify-content: center;
+      }
+   }
+
+   @include sm {
+      .sub-title {
+         font-size: 18px;
+      }
+   }
+}
+
+/* Hero 2 --------------------------------------*/
+.hero-2 {
+   position: relative;
+
+   &:after,
+   &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+   }
+
+
+
+
+   .swiper-slide {
+      position: relative;
+      z-index: 1;
+
+      &:before {
+         background: linear-gradient(0deg, rgba(23, 25, 31, 0.60) 0%, rgba(23, 25, 31, 0.60) 100%);
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         content: '';
+      }
+   }
+
+   .hero-style1 {
+      position: relative;
+      z-index: 6;
+      padding: 315px 0 230px;
+      max-width: 867px;
+
+      @include ml {
+         padding: 315px 0 150px;
+      }
+
+      @include md {
+         padding: 300px 0 100px;
+      }
+
+      @include sm {
+         padding: 250px 0 150px;
+      }
+
+      @include xs {
+         padding: 200px 0 100px;
+      }
+   }
+
+   .sub-title.style5 {
+      color: $white-color;
+      font-size: 14px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.20);
+      padding: 8px 16px;
+
+      @include xs {
+         margin-bottom: 0;
+      }
+   }
+
+   .hero-title {
+      font-size: 84px;
+      font-weight: 600;
+      line-height: 94px;
+      text-transform: capitalize;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      @include ml {
+         font-size: 60px;
+         line-height: 70px;
+      }
+
+      @include xs {
+         font-size: 45px;
+         line-height: 50px;
+      }
+   }
+
+   .hero-title .title1 {
+      display: inline-block;
+
+
+      span {
+         color: $theme-color2;
+         display: inline-block;
+      }
+   }
+
+
+
+   .scroll-down {
+      transform: rotate(90deg);
+      position: absolute;
+      bottom: 90px;
+      right: 20px;
+      text-align: center;
+      z-index: 2;
+      color: $white-color;
+   }
+
+   @media (max-width: 1699px) {
+      .scroll-down {
+         display: none
+      }
+   }
+
+   .scroll-down .scroll-wrap {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: $white-color;
+      font-weight: 300
+   }
+
+   .scroll-down .scroll-wrap span {
+      min-width: 40px;
+      padding-left: 15px;
+   }
+
+   .scroll-down .scroll-wrap span img {
+      transform: rotate(270deg);
+   }
+
+   .icon-box {
+      @include xxl {
+         display: none;
+      }
+   }
+
+   .slider-arrow {
+      position: absolute;
+      top: 50%;
+
+
+
+      &.prev {
+         left: 60px;
+         right: auto;
+
+         @media (max-width:1599px) {
+            left: 0;
+         }
+
+         @include xxl {
+            display: none;
+         }
+      }
+
+      &.next {
+         left: auto;
+         right: 60px;
+
+         @media (max-width:1599px) {
+            right: 0;
+         }
+
+         @include xxl {
+            display: none;
+         }
+      }
+   }
+
+   .slider-arrow.style3:hover {
+      background: $theme-color2;
+   }
+
+
+   .hero-category-wrap {
+      position: relative;
+      z-index: 1;
+
+      .hero-category-bg {
+         img {
+            width: 100%;
+         }
+      }
+
+      // .hero-main-category {
+      //     width: 200px;
+      //     height: 200px;
+      //     border-radius: 50px;
+      //     background: $gray-color;
+      //     border: 2px solid rgba(60, 60, 60, 0.3);
+      //     box-shadow: 0px 0px 4px #000000;
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     position: absolute;
+      //     left: 50%;
+      //     top: 25px;
+      //     transform: translate(-50%, 0);
+      // }
+      // .hero-category-list {
+      //     .hero-category-card {
+      //         width: 100px;
+      //         height: 100px;
+      //         display: flex;
+      //         align-items: center;
+      //         justify-content: center;
+      //         border-radius: 30px;
+      //         background: $gray-color;
+      //         border: 2px solid rgba(60, 60, 60, 0.3);
+      //         box-shadow: 0px 0px 4px #000000;
+      //         position: absolute;
+      //         left: 0;
+      //         top: 0;
+      //     }
+      // }
+   }
+}
+
+.hero-style2 {
+   position: relative;
+   z-index: 6;
+   padding: 280px 0 90px;
+
+   @include xxl {
+      padding: 250px 0 80px;
+   }
+
+   @include ml {
+      padding: 240px 0 80px;
+   }
+
+   @include xl {
+      padding: 220px 0 80px;
+   }
+
+   @include lg {
+      padding: 200px 0 60px;
+   }
+
+   @include sm {
+      padding: 180px 0 40px;
+   }
+
+   @include xs {
+      padding: 160px 0 40px;
+   }
+
+   .hero-title {
+      margin-bottom: 13px;
+   }
+
+   .hero-text {
+      max-width: 532px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+      font-weight: 400;
+      color: $border-color;
+
+      @include ml {
+         font-size: 18px;
+      }
+
+      @include lg {
+         font-size: 16px;
+      }
+   }
+
+   .btn-wrap {
+      gap: 24px;
+      margin-top: 30px;
+   }
+
+   @include lg {
+      text-align: center;
+
+      .hero-title {
+         margin-bottom: 15px;
+      }
+
+      .hero-text {
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .btn-wrap {
+         justify-content: center;
+      }
+   }
+}
+
+/* Hero 3 --------------------------------------*/
+.hero-3 {
+   .hero-style3 {
+      padding: 310px 0 189px;
+      @include xxl {
+         padding: 377px 0 189px;
+      }
+      @include ml {
+         padding: 327px 0 180px;
+      }
+      @include lg {
+         padding: 327px 0 180px;
+      }
+
+      @include md {
+         padding: 246px 0 250px;
+      }
+
+      @include xs {
+         padding: 263px 0 100px;
+      }
+   }
+
+   .sub-title.style5 {
+      background: transparent;
+      color: $white-color;
+      font-family: $title-font;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 0;
+
+      @include md {
+         font-size: 18px;
+      }
+   }
+
+   .hero-title {
+      font-size: 100px;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      @include md {
+         font-size: 80px;
+      }
+
+      @include sm {
+         font-size: 50px;
+      }
+   }
+
+   .hero-text {
+      color: $title-color;
+      font-size: 32px;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 10px;
+      padding-bottom: 8px;
+      background: $theme-color2;
+      display: inline-block;
+
+      @include sm {
+         font-size: 18px;
+      }
+   }
+
+   .checklist {
+      li {
+         color: $white-color;
+         font-size: 18px;
+         font-weight: 500;
+
+         &:before {
+            content: "\f00c";
+            position: absolute;
+            font-family: "Font Awesome 6 Pro";
+            background: transparent;
+            clip-path: none;
+         }
+      }
+   }
+
+   .th-btn {
+      margin-top: 50px;
+      background: $theme-color3;
+      text-transform: uppercase;
+
+      &:hover {
+         background: $theme-color2;
+         color: $title-color;
+      }
+   }
+
+   .box-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -11;
+
+      @include ml {
+         right: -200px;
+      }
+      @include xl {
+         right: -350px;
+      }
+      @include lg {
+         right: -420px;
+      }
+
+      @include md {
+         display: none;
+      }
+   }
+
+   .slider-arrow.style-border4 {
+      left: 120px;
+      top: calc(50% + 55px);
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(50px);
+      color: $white-color;
+
+      &:hover {
+         background: $theme-color3;
+      }
+
+      @media (max-width:1699px) {
+         left: 20px;
+      }
+      @include ml {
+         display: none;
+      }
+   }
+
+   .slider-arrow.style-border4.slider-next {
+      right: 120px;
+      left: auto;
+
+      @media (max-width:1699px) {
+         right: 20px;
+      }
+   }
+}
+
+.hero-info {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   padding: 50px;
+   padding-left: 140px;
+   padding-right: 380px;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+
+   @include lg {
+      padding: 40px 100px;
+   }
+
+   @include xs {
+      display: none;
+   }
+
+   .hero-info-bg {
+      width: 100%;
+      height: 100%;
+      z-index: -11;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   .bg-shape10 {
+      @include md {
+         display: none;
+      }
+   }
+
+   .box-title {
+      color: $title-color;
+      font-family: $body-font;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      span {
+         color: $theme-color3;
+      }
+   }
+
+   .box-text {
+      color: $black-color3;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+      max-width: 329px;
+   }
+}
+
+.hero-wrap3 {
+   position: relative;
+
+   .hero-play-wrap {
+      position: absolute;
+      right: 85px;
+      top: 190px;
+
+      @include xxl {
+         right: 80px;
+      }
+
+      @include ml {
+         right: 78px;
+      }
+
+      @include xl {
+         top: 186px;
+         right: 68px;
+      }
+
+      @include lg {
+         right: 44px;
+         top: 165px;
+      }
+
+      @include md {
+         position: relative;
+         top: -95px;
+         right: auto;
+         text-align: center;
+         margin-bottom: 265px;
+      }
+
+      @include xs {
+         margin-bottom: 145px;
+      }
+
+      @include vxs {
+         top: 0;
+         margin-bottom: 250px;
+      }
+
+      .hero-play-text {
+         font-size: 16px;
+         font-weight: 500;
+         font-family: $title-font;
+         color: $title-color;
+         max-width: 115px;
+         margin-left: 20px;
+
+         @include xxl {
+            margin-left: 60px;
+         }
+
+         @include ml {
+            margin-left: 0;
+         }
+
+         @include md {
+            margin-left: auto;
+            text-align: start;
+         }
+
+         @include vxs {
+            margin-left: 0;
+         }
+      }
+
+      .hero-play-arrow {
+         margin-left: 35px;
+         margin-bottom: 20px;
+
+         @include xxl {
+            margin-left: 65px;
+         }
+
+         @include ml {
+            margin-left: 0;
+         }
+
+         @include lg {
+            margin-bottom: 0;
+         }
+
+         @include md {
+            display: none;
+         }
+      }
+
+      .circle-tag {
+         background: $white-color;
+         border: 38px solid rgba(0, 0, 0, 0.4);
+         backdrop-filter: blur(15.6px);
+
+         .play-btn {
+            --icon-font-size: 40px;
+
+            &:before,
+            &:after {
+               display: none;
+            }
+
+            i {
+               background: transparent;
+               color: transparent;
+
+               &:before {
+                  background: linear-gradient(90deg, var(--theme-color3) 0%, var(--theme-color) 100%);
+                  -webkit-background-clip: text;
+
+               }
+            }
+
+            &:hover {
+               --icon-font-size: 50px;
+            }
+         }
+
+         @include ml {
+            width: 200px;
+            height: 200px;
+            border: 30px solid rgba(0, 0, 0, 0.4);
+
+            .circle-title-anime {
+               width: 180px;
+               height: 180px;
+               margin-left: -90px;
+               margin-top: -90px;
+
+               span {
+                  height: 95px;
+                  left: 44.5%;
+               }
+            }
+         }
+
+         @include xl {
+            width: 180px;
+            height: 180px;
+            border: 30px solid rgba(0, 0, 0, 0.4);
+
+            .circle-title-anime {
+               width: 160px;
+               height: 160px;
+               margin-left: -80px;
+               margin-top: -80px;
+
+               span {
+                  height: 84px;
+                  left: 43.5%;
+               }
+            }
+         }
+
+         @include lg {
+            width: 160px;
+            height: 160px;
+            border: 28px solid rgba(0, 0, 0, 0.4);
+
+            .circle-title-anime {
+               width: 140px;
+               height: 140px;
+               margin-left: -70px;
+               margin-top: -70px;
+
+               span {
+                  height: 76px;
+                  left: 42.5%;
+                  top: -7px;
+               }
+            }
+         }
+
+         @include md {
+            margin-top: 42px;
+         }
+      }
+   }
+}
+
+// .hero-style3 {
+//    padding: 250px 0 460px;
+//    max-width: 1139px;
+
+//    @include xl {
+//       max-width: 860px;
+//       padding-bottom: 360px;
+//    }
+
+//    @include lg {
+//       max-width: 670px;
+//       padding: 220px 0 360px;
+//    }
+
+//    @include md {
+//       max-width: none;
+//       padding: 220px 0 40px;
+//    }
+
+//    .hero-title {
+//       text-transform: uppercase;
+//       font-size: 104px;
+//       line-height: 1.096;
+//       margin-bottom: 10px;
+//       margin-top: -0.17em;
+
+//       @include ml {
+//          font-size: 80px;
+//       }
+
+//       @include xl {
+//          font-size: 70px;
+//       }
+
+//       @include lg {
+//          font-size: 60px;
+//       }
+
+//       @include md {
+//          font-size: 55px;
+//       }
+
+//       @include sm {
+//          font-size: 42px;
+//       }
+
+//       @include xs {
+//          font-size: 38px;
+//       }
+
+//       .hero-text-thumb {
+//          height: 73px;
+//          border-radius: 50px;
+//          overflow: hidden;
+//          display: inline-flex;
+
+//          @include ml {
+//             height: 60px;
+//          }
+
+//          @include xl {
+//             height: 46px;
+//          }
+
+//          @include sm {
+//             height: 28px;
+//          }
+//       }
+//    }
+
+//    .hero-content-wrap {
+//       max-width: 453px;
+//       margin-left: auto;
+//       margin-right: auto;
+
+//       @include md {
+//          margin-left: 0;
+//       }
+//    }
+
+//    .hero-text {
+//       font-size: 16px;
+//       font-weight: 600;
+//       font-family: $title-font;
+//       color: $title-color;
+//    }
+// }
+
+.hero-thumb3 {
+   margin-top: -400px;
+   position: relative;
+   z-index: 2;
+
+   img {
+      width: 100%;
+      min-height: 600px;
+      object-fit: cover;
+   }
+
+   @include xl {
+      margin-top: -300px;
+   }
+
+   @include md {
+      mask-image: none !important;
+      border-radius: 16px;
+      overflow: hidden;
+   }
+
+   @include xs {
+      margin-top: -200px;
+
+      img {
+         min-height: 400px;
+      }
+   }
+}

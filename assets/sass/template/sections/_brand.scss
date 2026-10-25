@@ -1,0 +1,166 @@
+/* Brand 1 ---------------------------------- */
+.brand-area-1 {
+   .container-fluid {
+      max-width: 1680px;
+      margin: 0 auto;
+   }
+}
+
+.brand-wrap1 {
+   .brand-wrap-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: -0.25em;
+      margin-bottom: 40px;
+
+      span {
+         font-size: 30px;
+      }
+   }
+
+   .swiper-wrapper {
+      transition-timing-function: linear;
+   }
+
+   .swiper-slide {
+      width: auto;
+   }
+}
+
+.brand-box {
+   display: grid;
+   align-content: center;
+   text-align: center;
+   justify-content: center;
+   transition: 0.4s ease-in-out;
+   min-height: 60px;
+
+   img {
+      transition: filter 0.3s;
+      filter: grayscale(100%) brightness(130%);
+   }
+
+   &:hover {
+      img {
+         filter: grayscale(0) brightness(100%);
+      }
+   }
+}
+
+/* Brand 2 ---------------------------------- */
+.brand-wrap2 {
+   border-top: 1px solid $black-color3;
+   border-bottom: 1px solid $black-color3;
+
+   .swiper-wrapper {
+      transition-timing-function: linear;
+   }
+
+   .swiper-slide {
+      width: auto;
+      opacity: 0.7;
+      transition: 0.4s;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
+
+
+
+/* Brand 3 ---------------------------------- */
+
+.brand-area-3 {
+
+ 
+
+   .container-fluid {
+      max-width: 1840px;
+      margin: 0 auto;
+   }
+}
+
+.brand-wrap3 {
+   border-radius: 30px;
+   border: 1px solid #E1E7F0;
+   background: $white-color;
+   padding: 0 80px;
+
+   @include ml {
+      padding: 0 20px;
+      border-radius: 00px;
+   }
+
+   .swiper-wrapper {
+      transition-timing-function: linear;
+   }
+
+   .swiper-slide {
+      width: auto;
+   }
+
+   .brand-box {
+      display: grid;
+      align-content: center;
+      text-align: center;
+      justify-content: center;
+      transition: 0.4s ease-in-out;
+      min-height: 60px;
+
+      img {
+         transition: filter 0.3s;
+         filter: none;
+      }
+
+
+   }
+}
+
+// brand-wrap4
+.brand-wrap4 {
+   .brand-box {
+      justify-content: flex-start;
+
+      img {
+         filter: grayscale(0) brightness(100%);
+         transition: 0.4s ease-in-out;
+      }
+
+      &:hover {
+         img {
+            filter: grayscale(0) brightness(100%);
+            transform: scale(-1) rotate(180deg);
+         }
+      }
+   }
+}
+
+// brand-wrap5
+.brand-wrap5 {
+   max-width: 1680px;
+   margin: 0 auto;
+
+   .swiper-wrapper {
+      transition-timing-function: linear;
+   }
+
+   .swiper-slide {
+      width: auto;
+   }
+
+   .brand-box {
+      display: grid;
+      align-content: center;
+      text-align: center;
+      justify-content: center;
+      transition: 0.4s ease-in-out;
+      min-height: 60px;
+
+      img {
+         transition: filter 0.3s;
+         filter: none;
+      }
+   }
+
+}

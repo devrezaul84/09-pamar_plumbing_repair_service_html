@@ -1,0 +1,99 @@
+/*-- Padding Left And Right --*/
+@for $i from 1 through $space-count {
+  .px-#{5 * $i} {
+    padding-right: 5px *$i;
+    padding-left: 5px *$i;
+  }
+}
+
+/*-- Padding Top And Bottom --*/
+@for $i from 1 through $space-count {
+  .py-#{5 * $i} {
+    padding-top: 5px *$i;
+    padding-bottom: 5px *$i;
+  }
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through $space-count {
+  .pt-#{5 * $i} {
+    padding-top: 5px *$i;
+  }
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through $space-count {
+  .pb-#{5 * $i} {
+    padding-bottom: 5px *$i;
+  }
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through $space-count {
+  .pl-#{5 * $i} {
+    padding-left: 5px *$i;
+  }
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through $space-count {
+  .pr-#{5 * $i} {
+    padding-right: 5px *$i;
+  }
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.pb-85 {
+  padding-bottom: 85px;
+}
+
+.pb-95 {
+  padding-bottom: 95px;
+}
+
+.pt-95 {
+  padding-top: 95px;
+}
+
+.pl-130 {
+  padding-left: 130px;
+}
+
+.pb-160 {
+  padding-bottom: 160px;
+
+  @include lg {
+    padding-bottom: 120px;
+  }
+
+  @include md {
+    padding-bottom: 80px;
+  }
+}
+
+.pt-235 {
+  padding-top: 235px;
+
+  @include ml {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,753 @@
+/* Service Card ---------------------------------- */
+.service-bg-shape1-1 {
+   transform: translate(-50%, 0);
+}
+
+.service-card {
+   position: relative;
+   padding: 50px;
+   background: $white-color;
+   border-radius: 24px;
+   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.06);
+   border-radius: 24px;
+   transition: all 1s ease;
+   margin-bottom: 215px;
+
+   @include md {
+      padding: 30px;
+   }
+
+   .box-icon {
+      margin-bottom: 24px;
+
+      .color-masking {
+         transition: all 0.4s ease-in-out;
+      }
+
+      .masking-src {
+         background: transparent;
+      }
+   }
+
+   @include sm {
+      padding: 30px 20px;
+   }
+
+   .box-title {
+      margin-bottom: -0.3em;
+      max-width: 300px;
+
+      a {
+         font-size: 32px;
+         font-weight: 700;
+         color: $title-color;
+
+         &:hover {
+            color: $theme-color;
+         }
+      }
+   }
+
+   .box-text {
+      margin-top: 15px;
+      margin-bottom: 14px;
+      color: $black-color3;
+      max-width: 441px;
+   }
+
+   .circle-tag {
+      width: 130px;
+      height: 130px;
+      border: 0;
+      background: $gray-color;
+
+
+      .circle-title-anime {
+         color: $title-color;
+         font-size: 14px;
+         font-weight: 500;
+         width: 125px;
+         height: 125px;
+         top: 88%;
+         left: 88%;
+
+         span {
+            --rotate-letter: 15.4deg;
+            height: 63px;
+            left: 41.5%;
+            top: 0px;
+         }
+      }
+   }
+
+   .box-img {
+      margin-top: 40px;
+      border-radius: 24px;
+      overflow: hidden;
+   }
+
+   @include xl {
+      .box-thumb {
+         img {
+            width: 100%;
+         }
+      }
+
+      .box-content {
+         transform: rotate(0);
+         width: -webkit-fill-available;
+         margin: 32px;
+         opacity: 0;
+      }
+   }
+
+   @include md {
+      .box-content {
+         padding: 50px;
+      }
+   }
+
+   @include sm {
+      .box-thumb {
+         img {
+            height: 400px;
+         }
+      }
+
+      .box-content {
+         padding: 40px;
+      }
+
+      .box-number {
+         font-size: 30px;
+      }
+
+      .box-title {
+
+         a {
+            font-size: 32px;
+         }
+      }
+
+      .icon-btn {
+         --btn-size: 40px;
+         font-size: 24px;
+      }
+   }
+
+   @include xs {
+      .box-content {
+         padding: 30px;
+      }
+
+      .box-number {
+         font-size: 24px;
+      }
+
+      .box-title {
+         max-width: 210px;
+
+         a {
+            font-size: 20px;
+         }
+      }
+   }
+
+   &.style1 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      opacity: 0;
+      visibility: hidden;
+      background: $theme-color;
+      z-index: -1;
+      transition: all 1s ease;
+      margin-bottom: 0;
+
+      .box-icon {
+         .color-masking {
+            transform: scale(-1) rotate(180deg);
+            background: transparent;
+
+            img {
+               filter: brightness(0) invert(1);
+            }
+         }
+      }
+
+
+      .box-title {
+
+         a {
+            color: $white-color;
+
+            &:hover {
+               color: $white-color;
+            }
+         }
+      }
+
+      .box-text {
+         color: $white-color;
+         max-width: 550px;
+      }
+
+   }
+
+   &.style2 {
+      position: unset;
+      opacity: 1;
+      visibility: visible;
+      background: $white-color;
+      margin: 0;
+      padding: 34px;
+
+      @include md {
+         padding: 30px;
+      }
+
+      .box-icon {
+         .color-masking {
+            transform: scale(-1) rotate(180deg);
+            background: transparent;
+
+            img {
+               filter: none;
+            }
+         }
+      }
+
+      .box-img {
+         img {
+            width: 100%;
+         }
+
+      }
+
+      .box-title {
+
+         a {
+            color: $title-color;
+
+            &:hover {
+               color: $title-color;
+            }
+         }
+      }
+
+      .box-text {
+         color: $black-color3;
+         max-width: 550px;
+      }
+
+      &:hover {
+         background: $theme-color;
+
+         .box-title a {
+            color: $white-color;
+         }
+
+         .box-text {
+            color: $white-color;
+         }
+
+         .box-icon {
+            .color-masking {
+
+               img {
+                  filter: brightness(1) invert(1);
+               }
+            }
+         }
+      }
+
+   }
+}
+
+.service-slider {
+   margin-top: -30px;
+
+
+   .swiper-slide {
+      margin-top: 30px;
+
+   }
+
+   .slider-pagination-wrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 745px;
+      position: relative;
+      margin-left: auto;
+      top: -65px;
+      margin-right: 356px;
+      margin-top: -70px;
+
+      @media (max-width:1730px) {
+         margin-right: 0px;
+      }
+
+      @include lg {
+         top: 0;
+         margin: 0;
+      }
+
+      .slider-pagination2 {
+         flex: none;
+
+         .current-slide {
+            font-size: 56px;
+            font-weight: 500;
+            font-family: $title-font;
+            color: $title-color;
+
+            @include sm {
+               font-size: 30px;
+            }
+         }
+
+         .divider,
+         .total-slides {
+            font-size: 20px;
+            font-family: $title-font;
+         }
+      }
+
+      .slider-pagination {
+         margin-top: 0;
+      }
+
+      .icon-box {
+         flex: none;
+      }
+   }
+}
+
+.service-slider .swiper-slide-active {
+
+   .service-card {
+      opacity: 0;
+      visibility: hidden;
+
+      &.style1 {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+
+}
+
+/* Service Area 2 ---------------------------------- */
+.service-wrap {
+   max-width: 1840px;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 24px;
+   padding: 0 40px;
+
+   @include md {
+      padding: 0 20px;
+   }
+
+}
+
+.service-wrap2 {
+   .title-area {}
+}
+
+.service-list-wrap {
+   display: grid;
+   grid-template-areas:
+      "one one one one one two two two two two two two"
+      "one one one one one three three three three three three three";
+
+   @media (max-width: 1199px) {
+      grid-template-areas:
+         "one one one"
+         "two two two"
+         "three three three";
+      margin-top: 30px;
+   }
+}
+
+.service-card2 {
+   border: 1px solid $gray-color4;
+   border-radius: 16px;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+   align-items: center;
+   position: relative;
+   align-items: center;
+   transition: 0.4s;
+   z-index: 1;
+   padding-right: 0;
+
+   &:nth-child(1) {
+      grid-area: one;
+      margin-right: 12px;
+      display: block;
+      padding: 0;
+
+      @media (max-width: 1199px) {
+         margin-right: 0;
+         margin-bottom: 24px;
+      }
+
+      .box-img {
+         height: auto;
+      }
+
+      .box-content {
+         padding: 32px;
+      }
+   }
+
+   &:nth-child(2) {
+      grid-area: two;
+      margin-left: 12px;
+      margin-bottom: 24px;
+
+      @media (max-width: 1199px) {
+         margin-left: 0;
+      }
+   }
+
+   &:nth-child(3) {
+      grid-area: three;
+      margin-left: 12px;
+
+      @media (max-width: 1199px) {
+         margin-left: 0;
+      }
+   }
+
+   .box-img {
+      position: relative;
+      min-width: 290px;
+      overflow: hidden;
+      border-radius: 16px;
+      margin: 16px;
+
+
+      img {
+         border-radius: 16px;
+         width: 100%;
+      }
+   }
+
+   .box-content {
+      padding-left: 32px;
+   }
+
+   .box-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: 1px solid $theme-color2;
+      margin-bottom: 24px;
+   }
+
+   .box-number {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: $title-font;
+      margin-top: -0.3em;
+      position: relative;
+      left: -30px;
+      transition: 0.4s;
+   }
+
+   .box-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      a {
+
+         &:hover {
+            opacity: 1;
+         }
+      }
+   }
+
+   .box-text {
+      color: $black-color3;
+      margin-bottom: 35px;
+   }
+
+   .link-btn.style9 .icon {
+      line-height: 16px;
+   }
+
+
+   &.item-active {
+      background: $black-color2;
+
+      .box-number {
+         left: 0;
+      }
+
+      .box-img {
+         opacity: 1;
+         scale: 1;
+      }
+
+      .box-title {
+         a {
+            opacity: 1;
+         }
+      }
+
+      .icon-btn {
+         opacity: 1;
+         left: 0;
+      }
+   }
+
+   @include md {
+      display: block;
+
+      .box-content {
+         padding: 32px;
+      }
+
+      .box-img {
+         position: relative;
+         rotate: none;
+         scale: none;
+         right: auto;
+         transform: none;
+         top: auto;
+         opacity: 1;
+         margin-bottom: 24px;
+         width: auto;
+      }
+
+      .box-number {
+         left: auto;
+      }
+
+      .box-title {
+         font-size: 24px;
+
+         a {
+            opacity: 1;
+         }
+      }
+
+      .icon-btn {
+         opacity: 1;
+         left: auto;
+      }
+   }
+
+   @include sm {
+      .box-content {
+         padding: 20px;
+      }
+
+      .box-img {
+         margin: 0;
+
+         img {}
+      }
+   }
+}
+
+/* Service Area 3 ---------------------------------- */
+.service-slider3 {
+   --pos-x: -130px;
+}
+
+.service-card3 {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+   border-radius: 20px;
+   background: $gray-color7;
+
+
+
+   // .service-card-bg-shape {
+   //    position: absolute;
+   //    top: 24px;
+   //    left: 0;
+   //    right: 0;
+   //    text-align: center;
+   // }
+
+   .box-thumb {
+      position: relative;
+
+      img {
+         transition: 0.4s;
+         width: 100%;
+      }
+   }
+
+   .box-icon {
+      width: 83px;
+      height: 80px;
+      background: $theme-color3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0px 20px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-bottom: -14px;
+
+      img {
+         width: auto;
+      }
+
+      &:after {
+         content: '';
+         position: absolute;
+         width: 14px;
+         height: 14px;
+         bottom: 0;
+         right: -14px;
+         background: $error-color2;
+         z-index: -1;
+         clip-path: polygon(0 0, 0% 100%, 100% 0);
+      }
+   }
+
+   .box-content {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      padding: 30px;
+
+      @include sm {
+         padding: 30px 20px;
+      }
+   }
+
+   .box-title {
+      line-height: 1.333;
+      margin-bottom: 12px;
+      font-family: $body-font;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: capitalize;
+
+      @include xl {
+         font-size: 18px;
+      }
+
+      @include lg {
+         font-size: 16px;
+      }
+   }
+
+   .box-text {
+      color: $black-color3;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: capitalize;
+   }
+
+   .th-btn {
+      margin-top: 25px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 13px 25px;
+      line-height: 15px;
+   }
+
+
+
+
+   @include vxs {
+      mask-image: none !important;
+   }
+}
+
+/* Service Details ---------------------------------- */
+.page-title {
+   margin-bottom: 20px;
+}
+
+.page-img {
+   margin-bottom: 40px;
+   overflow: hidden;
+   border-radius: 30px;
+   position: relative;
+
+   img {
+      width: 100%;
+   }
+
+   &.radius-20 {
+      border-radius: 20px;
+   }
+
+   @include sm {
+      border-radius: 10px;
+   }
+}
+
+.page-single {
+   margin-bottom: 30px;
+
+   p {
+      color: $black-color3;
+   }
+}
+
+.service-page-card {
+   padding: 28px;
+   border-radius: 24px;
+   background: $gray-color;
+   display: inline-flex;
+   align-items: center;
+   gap: 18px;
+
+   @include lg {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .box-icon {
+      flex: none;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      background: $white-color;
+      box-shadow: 0px 4px 20px 0px rgba(159, 159, 159, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .box-title {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      color: $title-color;
+      font-family: $title-font;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: capitalize;
+   }
+
+   .box-text {
+      font-size: 14px;
+      color: $black-color3;
+      font-size: 16px;
+      font-weight: 400;
+   }
+}

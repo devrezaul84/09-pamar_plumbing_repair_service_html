@@ -1,0 +1,50 @@
+.video-wrap {
+    max-width: 1664px;
+    margin-left: auto;
+
+    @include hd {
+        margin-right: auto;
+    }
+}
+
+.video-box-center {
+    position: relative;
+
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Video Area 1 -------------------------------*/
+.video-thumb1-1 {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include xs {
+        height: 300px;
+        margin: 0 10px;
+
+        .play-btn {
+            i {
+                --icon-font-size: 18px;
+            }
+        }
+    }
+}
+
+.video-area-5 {}
+
+.video-wrap2 {
+    max-width: 1620px;
+    margin: 0 auto;
+}
